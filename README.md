@@ -4,20 +4,20 @@
 - Overview of Rust
 - Setting up the environment (Rustup, Cargo)
 - First "Hello, World!" program
-- Understanding compiled languages vs. interpreted languages[4][5].
+- Understanding compiled languages vs. interpreted languages.
 
 **Day 2: Basic Syntax**
 - Variables (let keyword, mutability)
 - Data types (integers, floats, booleans)
-- Operators (+, -, \*, /)[3][7].
+- Operators (+, -, \*, /).
 
 **Day 3: Control Flow**
 - Conditional statements (if/else)
-- Loops (loop, while loop)[3][8].
+- Loops (loop, while loop).
 
 **Day 4: Functions in Rust**
 - Function basics (declaring and calling functions)
-- Function arguments and return types[3][7].
+- Function arguments and return types.
 
 **Day 5: Practice Problems on Basics**
 
