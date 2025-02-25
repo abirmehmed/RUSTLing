@@ -20,3 +20,5 @@ Since its first stable release in May 2015, Rust has seen rapid adoption across 
 Rust is increasingly recognized for its ability to combine low-level control with high-level ergonomics, making it an attractive choice for both systems programming and application development. Its focus on safety and performance positions it as a leading language in modern software development.
 
 https://doc.rust-lang.org/book/title-page.html
+
+https://play.rust-lang.org/
