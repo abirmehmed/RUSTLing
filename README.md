@@ -1,246 +1,217 @@
-### Day 1-5: Introduction to Rust and Basic Syntax
+---
 
-**Day 1: Introduction to Rust**
-- Overview of Rust
-- Setting up the environment (Rustup, Cargo)
-- First "Hello, World!" program
-- Understanding compiled languages vs. interpreted languages.
-
-**Day 2: Basic Syntax**
-- Variables (let keyword, mutability)
-- Data types (integers, floats, booleans)
-- Operators (+, -, \*, /).
-
-**Day 3: Control Flow**
-- Conditional statements (if/else)
-- Loops (loop, while loop).
-
-**Day 4: Functions in Rust**
-- Function basics (declaring and calling functions)
-- Function arguments and return types.
-
-**Day 5: Practice Problems on Basics**
-
-### Day 6–10 Compound Data Types
-
-#### **Compound Data Types**
-
-*   **Arrays**: Fixed-size collections.
-*   **Vectors**: Dynamic arrays.
-*   **Tuples**: Collections of different data types.
-
-#### Specific Days:
-
-*   **Day6:** Arrays  
-        * Declaring arrays  
-        * Accessing array elements  
-
-    ```rust
-    let arr = [1;10]; // Array of ten ones
-    ```
-
-*   **Day7:** Vectors  
-        * Creating vectors (`Vec::new()`, `vec![]`)  
-        * Adding elements (`push`, `insert`)
-
-    ```rust
-    let mut vec = Vec::new();
-    vec.push(1);
-    ```
-
-*   **Day8:** Tuples  
-        * Creating tuples `(type1,type2)`  
-        * Accessing tuple elements using indexing or pattern matching
-
-    ```rust
-    let tup = ("hello", true);
-    println!("{}", tup.0); // Prints "hello"
-    ```
-
-*   **9:** Strings in Rust   
-      - Creating strings (`String::from()`, string literals)   
-      - String operations (`+`, `format!()`)
-
-      ```rust
-      let s = String::from("Hello");
-      println!("{} world!", s); // Using format!
-      ```
-
-#### Practice Exercises on Compound Data Types:
-
-#### Day10:
-Practice exercises involving arrays/vectors/tuples/strings.
+## **Lesson 1: Introduction to Rust**
+- **Topics**:
+  - Overview of Rust (safety, performance, concurrency).
+  - Setting up the environment (Rustup, Cargo).
+  - Writing your first "Hello, World!" program.
+  - Understanding compiled vs. interpreted languages.
 
 ---
 
-### Day11–15 Object-Oriented Programming Basics
-
-#### OOP Concepts in Rust
-
-Rust supports object-oriented programming through structs and enums.
-
-Specific Days:
-
-1\. Structs – Defining Custom Types
-
-
-\*\*
-
-\*\*
-
-Structs allow you to create custom data structures.
-
-
-Example code demonstrating struct definition:
-
-
-```rust
-struct Person {
-name:String,
-age:i32,
-}
-```
-2\. Enums – Defining Enumerations
-
-
-Enums are used for defining a set of named values.
-
-
-Example code demonstrating enum definition:
-
-
-```rust
-enum Color {
-Red,
-Green,
-Blue,
-}
-```
-3\. Methods & Associated Functions
-
-
-Methods are functions defined inside an impl block for structs/enums.
-
-
-Associated functions are like static methods but belong to the type itself.
-
-
-Example code showing method implementation:
-
-
-```rust
-impl Person {
-fn greet(&self) {
-println!("Hello!");
-}
-}
-```
-Days Dedicated to Each Topic:
-
-
-\-day11:\ Structs\
-\-day12:\ Enums\
-\-day13:\ Methods & Associated Functions\
-\-day14:\ Implementing Traits\
-\-day15:\ Practice Problems on OOP Concepts
-
-
-
-Implement real-world scenarios using these OOP principles.
-
-
+## **Lesson 2: Basic Syntax - Variables and Mutability**
+- **Topics**:
+  - Declaring variables with `let`.
+  - Understanding mutability (`mut` keyword).
+  - Shadowing variables.
 
 ---
 
-### Day16–20 Advanced Topics in Object-Oriented Programming & Error Handling
-
-#### Advanced OOP Topics
-
-
-Polymorphism allows objects of different classes related by traits to be treated as if they were of the same type.
-
-
-Operator Overloading allows customization of operators like + or << for user-defined data types.
-
-
-Templates aren’t directly available; instead, use generics which allow writing reusable code that can work with multiple data types without needing explicit casting.
-
-
-
-Error Handling Mechanisms include Result type and Option enum which help manage potential failures gracefully.
-
-
-
-Days Dedicated:
-
-
-\-\-\-
-
-\-\-\-
-
-\-day16:\ Polymorphism Examples\
-\-day17:\ Operator Overloading\
-\-day18:\ Generics Basics\
-\-day19:\ Advanced Error Handling Techniques\
-\-day20:\ Practical Exercises on Advanced OOP & Error Handling
-
-
-
-Combine polymorphism/operator overloading/generics/error handling concepts into comprehensive projects.
-
-
+## **Lesson 3: Basic Syntax - Data Types**
+- **Topics**:
+  - Integers (`i32`, `u64`, etc.).
+  - Floating-point numbers (`f32`, `f64`).
+  - Booleans (`bool`).
+  - Characters (`char`).
 
 ---
 
-### Day21–25 File Input/Output & Modules/Crates Management
-
-File I/O Operations include reading/writing text files (.txt), binary files (.bin).
-
-
-Modules help organize your code into logical units that can be reused across projects or shared as crates via Cargo package manager.
-
-
-
-
-Specific Days:
-
-
-21.\ Reading Text Files (.txt)\
-22.\ Writing Text Files (.txt)\
-23.\ Reading/Writing Binary Files (.bin)\
-24.\ Modules Organization \
-25.\ Crates Management with Cargo
-
-
-
-Implement file handling tasks combined with module management techniques using Cargo packages.
-
-
+## **Lesson 4: Basic Syntax - Operators**
+- **Topics**:
+  - Arithmetic operators (`+`, `-`, `*`, `/`, `%`).
+  - Comparison operators (`==`, `!=`, `>`, `<`, `>=`, `<=`).
+  - Logical operators (`&&`, `||`, `!`).
 
 ---
 
-### Day26–30 Final Projects & Review Sessions
+## **Lesson 5: Control Flow - Conditional Statements**
+- **Topics**:
+  - `if` and `else` statements.
+  - Using `if` in a `let` statement.
 
+---
 
-Final Project Development Days:
+## **Lesson 6: Control Flow - Loops**
+- **Topics**:
+  - `loop` (infinite loops and `break`).
+  - `while` loops.
+  - Returning values from loops.
 
-Develop comprehensive projects incorporating all learned concepts such as data structures/algorithms/OOP/file handling/error management/etc., into real-world applications like games/calculators/chatbots/etc., depending on interest level/skill set/time available.
+---
 
+## **Lesson 7: Functions - Basics**
+- **Topics**:
+  - Declaring and calling functions.
+  - Function parameters and return types.
 
+---
 
+## **Lesson 8: Functions - Advanced**
+- **Topics**:
+  - Function overloading (not directly supported, but alternatives).
+  - Closures (basic introduction).
 
-Review Sessions:
+---
 
+## **Lesson 9: Practice Problems on Basics**
+- **Topics**:
+  - Solve problems involving variables, control flow, and functions.
 
+---
 
-Spend time reviewing key concepts covered throughout the course focusing particularly on areas where improvement is needed based on feedback/practice results/test scores etc., ensuring solid foundational understanding before moving forward beyond this beginner’s course scope.
+## **Lesson 10: Compound Data Types - Arrays**
+- **Topics**:
+  - Declaring and initializing arrays.
+  - Accessing array elements.
+  - Iterating over arrays.
 
+---
 
+## **Lesson 11: Compound Data Types - Vectors**
+- **Topics**:
+  - Creating vectors (`Vec::new()`, `vec![]`).
+  - Adding and removing elements (`push`, `pop`).
+  - Iterating over vectors.
 
+---
 
-Final Assessment/Test Preparation:
+## **Lesson 12: Compound Data Types - Tuples**
+- **Topics**:
+  - Creating tuples.
+  - Accessing tuple elements (indexing and pattern matching).
 
+---
 
+## **Lesson 13: Strings in Rust**
+- **Topics**:
+  - String literals (`&str`).
+  - String objects (`String`).
+  - Common string operations (`push_str`, `format!`).
 
-Prepare students for potential assessments/tests by practicing past exams/sample questions/review quizzes covering major topics discussed during these thirty days ensuring readiness/confidence when facing actual evaluations later down line whether academic/professional settings alike!
+---
 
+## **Lesson 14: Practice Problems on Compound Data Types**
+- **Topics**:
+  - Solve problems involving arrays, vectors, tuples, and strings.
+
+---
+
+## **Lesson 15: Structs - Defining Custom Types**
+- **Topics**:
+  - Defining and instantiating structs.
+  - Accessing struct fields.
+  - Tuple structs.
+
+---
+
+## **Lesson 16: Enums - Defining Enumerations**
+- **Topics**:
+  - Defining enums.
+  - Using enums with `match`.
+
+---
+
+## **Lesson 17: Methods and Associated Functions**
+- **Topics**:
+  - Defining methods for structs and enums.
+  - Associated functions (similar to static methods).
+
+---
+
+## **Lesson 18: Traits - Defining and Implementing**
+- **Topics**:
+  - Defining traits.
+  - Implementing traits for structs and enums.
+
+---
+
+## **Lesson 19: Practice Problems on OOP Concepts**
+- **Topics**:
+  - Solve problems involving structs, enums, methods, and traits.
+
+---
+
+## **Lesson 20: Advanced OOP - Polymorphism**
+- **Topics**:
+  - Using traits for polymorphism.
+  - Dynamic dispatch with `dyn`.
+
+---
+
+## **Lesson 21: Advanced OOP - Operator Overloading**
+- **Topics**:
+  - Overloading operators using traits (`Add`, `Sub`, etc.).
+
+---
+
+## **Lesson 22: Generics - Basics**
+- **Topics**:
+  - Defining generic functions and structs.
+  - Using generics with traits.
+
+---
+
+## **Lesson 23: Error Handling - Basics**
+- **Topics**:
+  - The `Result` type.
+  - The `Option` type.
+  - Handling errors with `match` and `unwrap`.
+
+---
+
+## **Lesson 24: Advanced Error Handling**
+- **Topics**:
+  - Propagating errors with `?`.
+  - Custom error types.
+
+---
+
+## **Lesson 25: Practice Problems on Advanced OOP and Error Handling**
+- **Topics**:
+  - Solve problems involving polymorphism, generics, and error handling.
+
+---
+
+## **Lesson 26: File I/O - Reading and Writing Text Files**
+- **Topics**:
+  - Reading from text files.
+  - Writing to text files.
+
+---
+
+## **Lesson 27: File I/O - Reading and Writing Binary Files**
+- **Topics**:
+  - Reading from binary files.
+  - Writing to binary files.
+
+---
+
+## **Lesson 28: Modules and Crates**
+- **Topics**:
+  - Organizing code with modules.
+  - Creating and using crates with Cargo.
+
+---
+
+## **Lesson 29: Final Project Development**
+- **Topics**:
+  - Build a comprehensive project (e.g., a calculator, to-do app, or game).
+
+---
+
+## **Lesson 30: Review and Final Assessment**
+- **Topics**:
+  - Review key concepts.
+  - Solve practice problems and take a final assessment.
+
+---
