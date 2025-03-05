@@ -1,233 +1,185 @@
-# **Day 3: Control Flow in Rust**
+# **Lesson 3: Basic Syntax - Data Types**
 
-Welcome to Day 3 of your Rust journey! Today, we’ll explore **control flow**, which allows you to make decisions and repeat actions in your programs. Specifically, we’ll cover **conditional statements** (`if/else`) and **loops** (`loop`, `while`). These are fundamental constructs that enable you to write dynamic and flexible programs.
+Welcome to Lesson 3! Today, we’ll explore Rust’s **basic data types**, including integers, floating-point numbers, booleans, and characters. Understanding these data types is essential for writing effective Rust programs. Let’s dive in!
 
 ---
 
-## **1. Conditional Statements (`if/else`)**
+## **1. Integers**
 
-Conditional statements allow your program to make decisions based on certain conditions. In Rust, the primary conditional statement is `if/else`.
+Integers are whole numbers without a fractional component. Rust supports both **signed** (positive and negative) and **unsigned** (only positive) integers.
 
-### **Syntax**
-```rust
-if condition {
-    // Code to execute if the condition is true
-} else if another_condition {
-    // Code to execute if another_condition is true
-} else {
-    // Code to execute if none of the conditions are true
-}
-```
-
-### **Key Points**
-- The `condition` must evaluate to a boolean (`true` or `false`).
-- The `else if` and `else` blocks are optional.
-- Rust does not require parentheses around the condition, but curly braces `{}` are mandatory.
+### **Integer Types**
+| Type  | Description                     | Range (Signed)          | Range (Unsigned)        |
+|-------|---------------------------------|-------------------------|-------------------------|
+| `i8`  | 8-bit signed integer            | -128 to 127             | -                       |
+| `u8`  | 8-bit unsigned integer          | -                       | 0 to 255                |
+| `i16` | 16-bit signed integer           | -32,768 to 32,767       | -                       |
+| `u16` | 16-bit unsigned integer         | -                       | 0 to 65,535             |
+| `i32` | 32-bit signed integer           | -2,147,483,648 to 2,147,483,647 | - |
+| `u32` | 32-bit unsigned integer         | -                       | 0 to 4,294,967,295      |
+| `i64` | 64-bit signed integer           | -9,223,372,036,854,775,808 to 9,223,372,036,854,775,807 | - |
+| `u64` | 64-bit unsigned integer         | -                       | 0 to 18,446,744,073,709,551,615 |
+| `isize` | Pointer-sized signed integer | Platform-dependent      | -                       |
+| `usize` | Pointer-sized unsigned integer | -                       | Platform-dependent      |
 
 ### **Example**
 ```rust
 fn main() {
-    let number = 7;
-
-    if number < 5 {
-        println!("The number is less than 5");
-    } else if number == 5 {
-        println!("The number is exactly 5");
-    } else {
-        println!("The number is greater than 5");
-    }
+    let a: i32 = 42; // 32-bit signed integer
+    let b: u64 = 100; // 64-bit unsigned integer
+    println!("a = {}, b = {}", a, b);
 }
 ```
 
 #### **Output**
 ```
-The number is greater than 5
+a = 42, b = 100
 ```
 
 ---
 
-### **Using `if` in a `let` Statement**
-In Rust, `if` is an expression, meaning it can return a value. This allows you to use `if` on the right-hand side of a `let` statement.
+## **2. Floating-Point Numbers**
 
-#### **Example**
+Floating-point numbers represent numbers with a fractional component. Rust supports two floating-point types: `f32` (32-bit) and `f64` (64-bit).
+
+### **Floating-Point Types**
+| Type  | Description                     | Precision               |
+|-------|---------------------------------|-------------------------|
+| `f32` | 32-bit floating-point number    | ~6-9 decimal digits     |
+| `f64` | 64-bit floating-point number    | ~15-17 decimal digits   |
+
+### **Example**
 ```rust
 fn main() {
-    let condition = true;
-    let number = if condition { 5 } else { 6 };
-
-    println!("The value of number is: {}", number);
+    let pi: f64 = 3.14159; // 64-bit floating-point number
+    let gravity: f32 = 9.81; // 32-bit floating-point number
+    println!("pi = {}, gravity = {}", pi, gravity);
 }
 ```
 
 #### **Output**
 ```
-The value of number is: 5
+pi = 3.14159, gravity = 9.81
 ```
 
 ---
 
-## **2. Loops**
+## **3. Booleans**
 
-Loops allow you to execute a block of code repeatedly. Rust provides three types of loops:
-1. `loop`: Infinite loop until explicitly stopped.
-2. `while`: Loop while a condition is true.
-3. `for`: Iterate over a collection (covered in a later lesson).
+Booleans represent truth values and can be either `true` or `false`. They are often used in conditional statements and loops.
 
----
+### **Boolean Type**
+| Type  | Description                     | Values                  |
+|-------|---------------------------------|-------------------------|
+| `bool` | Boolean                        | `true` or `false`      |
 
-### **2.1. `loop`**
-The `loop` keyword creates an infinite loop. You can exit the loop using the `break` keyword.
-
-#### **Syntax**
-```rust
-loop {
-    // Code to execute repeatedly
-    if condition {
-        break; // Exit the loop
-    }
-}
-```
-
-#### **Example**
+### **Example**
 ```rust
 fn main() {
-    let mut count = 0;
-
-    loop {
-        println!("Count: {}", count);
-        count += 1;
-
-        if count == 5 {
-            break; // Exit the loop when count reaches 5
-        }
-    }
+    let is_rust_fun: bool = true;
+    let is_learning_easy: bool = false;
+    println!("Is Rust fun? {}", is_rust_fun);
+    println!("Is learning easy? {}", is_learning_easy);
 }
 ```
 
 #### **Output**
 ```
-Count: 0
-Count: 1
-Count: 2
-Count: 3
-Count: 4
+Is Rust fun? true
+Is learning easy? false
 ```
 
 ---
 
-### **2.2. `while` Loop**
-The `while` loop repeats a block of code as long as a condition is true.
+## **4. Characters**
 
-#### **Syntax**
-```rust
-while condition {
-    // Code to execute while the condition is true
-}
-```
+Characters represent a single Unicode scalar value. They are enclosed in single quotes (`'`).
 
-#### **Example**
+### **Character Type**
+| Type  | Description                     | Example                 |
+|-------|---------------------------------|-------------------------|
+| `char` | Single Unicode character       | `'R'`, `'😊'`           |
+
+### **Example**
 ```rust
 fn main() {
-    let mut count = 0;
-
-    while count < 5 {
-        println!("Count: {}", count);
-        count += 1;
-    }
+    let letter: char = 'R';
+    let emoji: char = '😊';
+    println!("letter = {}, emoji = {}", letter, emoji);
 }
 ```
 
 #### **Output**
 ```
-Count: 0
-Count: 1
-Count: 2
-Count: 3
-Count: 4
+letter = R, emoji = 😊
 ```
 
 ---
 
-### **2.3. Returning Values from Loops**
-You can use the `break` keyword to return a value from a loop.
+## **5. Putting It All Together**
 
-#### **Example**
+Let’s write a program that uses all the basic data types:
+
 ```rust
 fn main() {
-    let mut count = 0;
+    // Integers
+    let a: i32 = 42;
+    let b: u64 = 100;
 
-    let result = loop {
-        count += 1;
+    // Floating-point numbers
+    let pi: f64 = 3.14159;
+    let gravity: f32 = 9.81;
 
-        if count == 5 {
-            break count * 2; // Return a value from the loop
-        }
-    };
+    // Booleans
+    let is_rust_fun: bool = true;
+    let is_learning_easy: bool = false;
 
-    println!("The result is: {}", result);
+    // Characters
+    let letter: char = 'R';
+    let emoji: char = '😊';
+
+    // Print all values
+    println!("a = {}, b = {}", a, b);
+    println!("pi = {}, gravity = {}", pi, gravity);
+    println!("Is Rust fun? {}", is_rust_fun);
+    println!("Is learning easy? {}", is_learning_easy);
+    println!("letter = {}, emoji = {}", letter, emoji);
 }
 ```
 
 #### **Output**
 ```
-The result is: 10
+a = 42, b = 100
+pi = 3.14159, gravity = 9.81
+Is Rust fun? true
+Is learning easy? false
+letter = R, emoji = 😊
 ```
 
 ---
 
-## **3. Putting It All Together**
+## **6. Practice Exercises**
 
-Let’s write a program that uses both conditional statements and loops to simulate a simple guessing game:
+1. **Integers**:
+   - Declare two variables: one `i32` and one `u64`.
+   - Perform arithmetic operations (addition, subtraction, multiplication) on them.
 
-```rust
-use std::io;
+2. **Floating-Point Numbers**:
+   - Declare two variables: one `f32` and one `f64`.
+   - Perform division and multiplication on them.
 
-fn main() {
-    let secret_number = 42;
-    let mut guess = String::new();
+3. **Booleans**:
+   - Declare two boolean variables and use them in a conditional statement.
 
-    loop {
-        println!("Guess the number (between 1 and 100):");
-
-        guess.clear();
-        io::stdin()
-            .read_line(&mut guess)
-            .expect("Failed to read input");
-
-        let guess: u32 = match guess.trim().parse() {
-            Ok(num) => num,
-            Err(_) => {
-                println!("Please enter a valid number!");
-                continue;
-            }
-        };
-
-        if guess < secret_number {
-            println!("Too small!");
-        } else if guess > secret_number {
-            println!("Too big!");
-        } else {
-            println!("You win!");
-            break;
-        }
-    }
-}
-```
+4. **Characters**:
+   - Declare a `char` variable and print it along with a message.
 
 ---
 
-## **4. Key Takeaways**
-- **Conditional Statements**: Use `if/else` to make decisions based on conditions.
-- **Loops**:
-  - Use `loop` for infinite loops and `break` to exit.
-  - Use `while` to loop while a condition is true.
-- **Returning Values**: You can return values from loops using `break`.
-
----
-
-## **5. Practice Exercises**
-1. Write a program that prints all even numbers between 1 and 20 using a `while` loop.
-2. Write a program that calculates the factorial of a number using a `loop`.
-3. Modify the guessing game to limit the number of attempts to 5.
+## **7. Key Takeaways**
+- **Integers**: Use `i32`, `u64`, etc., for whole numbers.
+- **Floating-Point Numbers**: Use `f32` or `f64` for numbers with fractional parts.
+- **Booleans**: Use `bool` for true/false values.
+- **Characters**: Use `char` for single Unicode characters.
 
 ---
