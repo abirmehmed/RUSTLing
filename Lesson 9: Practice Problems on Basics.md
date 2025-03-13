@@ -315,3 +315,305 @@ FizzBuzz
 ---
 
 
+---
+
+## **Problem 11: Find the Minimum**
+
+### **Problem Statement**
+Write a function called `find_min` that takes three integers as input and returns the smallest one.
+
+### **Solution**
+```rust
+fn find_min(a: i32, b: i32, c: i32) -> i32 {
+    if a <= b && a <= c {
+        a
+    } else if b <= a && b <= c {
+        b
+    } else {
+        c
+    }
+}
+
+fn main() {
+    let a = 10;
+    let b = 20;
+    let c = 15;
+    println!("The minimum is: {}", find_min(a, b, c));
+}
+```
+
+#### **Output**
+```
+The minimum is: 10
+```
+
+---
+
+## **Problem 12: Check Leap Year**
+
+### **Problem Statement**
+Write a function called `is_leap_year` that takes a year as input and returns `true` if it’s a leap year and `false` otherwise. A leap year is divisible by 4 but not by 100, unless it’s also divisible by 400.
+
+### **Solution**
+```rust
+fn is_leap_year(year: u32) -> bool {
+    (year % 4 == 0 && year % 100 != 0) || (year % 400 == 0)
+}
+
+fn main() {
+    let year = 2024;
+    if is_leap_year(year) {
+        println!("{} is a leap year", year);
+    } else {
+        println!("{} is not a leap year", year);
+    }
+}
+```
+
+#### **Output**
+```
+2024 is a leap year
+```
+
+---
+
+## **Problem 13: Calculate Power**
+
+### **Problem Statement**
+Write a function called `power` that takes two integers, `base` and `exponent`, and returns `base` raised to the power of `exponent`.
+
+### **Solution**
+```rust
+fn power(base: i32, exponent: u32) -> i32 {
+    let mut result = 1;
+    for _ in 0..exponent {
+        result *= base;
+    }
+    result
+}
+
+fn main() {
+    let base = 2;
+    let exponent = 3;
+    println!("{}^{} = {}", base, exponent, power(base, exponent));
+}
+```
+
+#### **Output**
+```
+2^3 = 8
+```
+
+---
+
+## **Problem 14: Count Words in a String**
+
+### **Problem Statement**
+Write a function called `count_words` that takes a string slice (`&str`) and returns the number of words in the string.
+
+### **Solution**
+```rust
+fn count_words(s: &str) -> usize {
+    s.split_whitespace().count()
+}
+
+fn main() {
+    let s = "Hello, world! This is Rust.";
+    println!("Number of words: {}", count_words(s));
+}
+```
+
+#### **Output**
+```
+Number of words: 5
+```
+
+---
+
+## **Problem 15: Check if a Number is Palindrome**
+
+### **Problem Statement**
+Write a function called `is_number_palindrome` that takes an integer and returns `true` if the number is a palindrome (reads the same backward as forward) and `false` otherwise.
+
+### **Solution**
+```rust
+fn is_number_palindrome(mut num: i32) -> bool {
+    let original = num;
+    let mut reversed = 0;
+    while num != 0 {
+        reversed = reversed * 10 + num % 10;
+        num /= 10;
+    }
+    original == reversed
+}
+
+fn main() {
+    let num = 12321;
+    if is_number_palindrome(num) {
+        println!("{} is a palindrome", num);
+    } else {
+        println!("{} is not a palindrome", num);
+    }
+}
+```
+
+#### **Output**
+```
+12321 is a palindrome
+```
+
+---
+
+## **Problem 16: Find the GCD**
+
+### **Problem Statement**
+Write a function called `gcd` that takes two integers and returns their greatest common divisor (GCD).
+
+### **Solution**
+```rust
+fn gcd(mut a: u32, mut b: u32) -> u32 {
+    while b != 0 {
+        let temp = b;
+        b = a % b;
+        a = temp;
+    }
+    a
+}
+
+fn main() {
+    let a = 56;
+    let b = 98;
+    println!("GCD of {} and {} is: {}", a, b, gcd(a, b));
+}
+```
+
+#### **Output**
+```
+GCD of 56 and 98 is: 14
+```
+
+---
+
+## **Problem 17: Check if a String Contains a Substring**
+
+### **Problem Statement**
+Write a function called `contains_substring` that takes two string slices (`&str`) and returns `true` if the second string is a substring of the first string, and `false` otherwise.
+
+### **Solution**
+```rust
+fn contains_substring(s: &str, sub: &str) -> bool {
+    s.contains(sub)
+}
+
+fn main() {
+    let s = "Hello, world!";
+    let sub = "world";
+    if contains_substring(s, sub) {
+        println!("'{}' contains '{}'", s, sub);
+    } else {
+        println!("'{}' does not contain '{}'", s, sub);
+    }
+}
+```
+
+#### **Output**
+```
+'Hello, world!' contains 'world'
+```
+
+---
+
+## **Problem 18: Find the Length of the Longest Word**
+
+### **Problem Statement**
+Write a function called `longest_word_length` that takes a string slice (`&str`) and returns the length of the longest word in the string.
+
+### **Solution**
+```rust
+fn longest_word_length(s: &str) -> usize {
+    s.split_whitespace().map(|word| word.len()).max().unwrap_or(0)
+}
+
+fn main() {
+    let s = "Hello, world! This is Rust.";
+    println!("Length of the longest word: {}", longest_word_length(s));
+}
+```
+
+#### **Output**
+```
+Length of the longest word: 6
+```
+
+---
+
+## **Problem 19: Check if a Number is Armstrong**
+
+### **Problem Statement**
+Write a function called `is_armstrong` that takes an integer and returns `true` if it’s an Armstrong number (a number that is equal to the sum of its own digits each raised to the power of the number of digits) and `false` otherwise.
+
+### **Solution**
+```rust
+fn is_armstrong(mut num: u32) -> bool {
+    let original = num;
+    let num_digits = num.to_string().len() as u32;
+    let mut sum = 0;
+    while num != 0 {
+        let digit = num % 10;
+        sum += digit.pow(num_digits);
+        num /= 10;
+    }
+    original == sum
+}
+
+fn main() {
+    let num = 153;
+    if is_armstrong(num) {
+        println!("{} is an Armstrong number", num);
+    } else {
+        println!("{} is not an Armstrong number", num);
+    }
+}
+```
+
+#### **Output**
+```
+153 is an Armstrong number
+```
+
+---
+
+## **Problem 20: Generate Fibonacci Sequence Up to N**
+
+### **Problem Statement**
+Write a function called `fibonacci_sequence` that takes an integer `n` and returns a vector containing the Fibonacci sequence up to `n`.
+
+### **Solution**
+```rust
+fn fibonacci_sequence(n: u32) -> Vec<u32> {
+    let mut sequence = Vec::new();
+    let mut a = 0;
+    let mut b = 1;
+    while a <= n {
+        sequence.push(a);
+        let temp = a;
+        a = b;
+        b = temp + b;
+    }
+    sequence
+}
+
+fn main() {
+    let n = 20;
+    println!("Fibonacci sequence up to {}: {:?}", n, fibonacci_sequence(n));
+}
+```
+
+#### **Output**
+```
+Fibonacci sequence up to 20: [0, 1, 1, 2, 3, 5, 8, 13]
+```
+
+---
+
+
