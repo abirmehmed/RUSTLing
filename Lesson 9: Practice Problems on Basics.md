@@ -2,6 +2,112 @@
 
 Welcome to Lesson 9! Today, we’ll solve **practice problems** that involve **variables**, **control flow**, and **functions**. These problems will help you solidify your understanding of the basics of Rust. Let’s dive in!
 
+Sure! Here’s a **list of all 20 problems** from **Problem 1** to **Problem 20**, along with their descriptions:
+
+---
+
+### **Problem 1: Even or Odd**
+Write a function called `is_even` that takes an integer as input and returns `true` if the number is even and `false` if it’s odd.
+
+---
+
+### **Problem 2: Find the Maximum**
+Write a function called `find_max` that takes three integers as input and returns the largest one.
+
+---
+
+### **Problem 3: Factorial**
+Write a function called `factorial` that takes an integer `n` and returns its factorial (i.e., `n! = n * (n-1) * ... * 1`).
+
+---
+
+### **Problem 4: Fibonacci Sequence**
+Write a function called `fibonacci` that takes an integer `n` and returns the `n`-th number in the Fibonacci sequence.
+
+---
+
+### **Problem 5: Sum of Digits**
+Write a function called `sum_of_digits` that takes an integer and returns the sum of its digits.
+
+---
+
+### **Problem 6: Prime Number Check**
+Write a function called `is_prime` that takes an integer and returns `true` if it’s a prime number and `false` otherwise.
+
+---
+
+### **Problem 7: Reverse a String**
+Write a function called `reverse_string` that takes a string slice (`&str`) and returns the reversed string.
+
+---
+
+### **Problem 8: Count Vowels**
+Write a function called `count_vowels` that takes a string slice (`&str`) and returns the number of vowels (a, e, i, o, u) in the string.
+
+---
+
+### **Problem 9: Palindrome Check**
+Write a function called `is_palindrome` that takes a string slice (`&str`) and returns `true` if the string is a palindrome (reads the same backward as forward) and `false` otherwise.
+
+---
+
+### **Problem 10: FizzBuzz**
+Write a function called `fizzbuzz` that takes an integer `n` and prints the numbers from 1 to `n`. For multiples of 3, print "Fizz" instead of the number. For multiples of 5, print "Buzz". For multiples of both 3 and 5, print "FizzBuzz".
+
+---
+
+### **Problem 11: Find the Minimum**
+Write a function called `find_min` that takes three integers as input and returns the smallest one.
+
+---
+
+### **Problem 12: Check Leap Year**
+Write a function called `is_leap_year` that takes a year as input and returns `true` if it’s a leap year and `false` otherwise.
+
+---
+
+### **Problem 13: Calculate Power**
+Write a function called `power` that takes two integers, `base` and `exponent`, and returns `base` raised to the power of `exponent`.
+
+---
+
+### **Problem 14: Count Words in a String**
+Write a function called `count_words` that takes a string slice (`&str`) and returns the number of words in the string.
+
+---
+
+### **Problem 15: Check if a Number is Palindrome**
+Write a function called `is_number_palindrome` that takes an integer and returns `true` if the number is a palindrome (reads the same backward as forward) and `false` otherwise.
+
+---
+
+### **Problem 16: Find the GCD**
+Write a function called `gcd` that takes two integers and returns their greatest common divisor (GCD).
+
+---
+
+### **Problem 17: Check if a String Contains a Substring**
+Write a function called `contains_substring` that takes two string slices (`&str`) and returns `true` if the second string is a substring of the first string, and `false` otherwise.
+
+---
+
+### **Problem 18: Find the Length of the Longest Word**
+Write a function called `longest_word_length` that takes a string slice (`&str`) and returns the length of the longest word in the string.
+
+---
+
+### **Problem 19: Check if a Number is Armstrong**
+Write a function called `is_armstrong` that takes an integer and returns `true` if it’s an Armstrong number (a number that is equal to the sum of its own digits each raised to the power of the number of digits) and `false` otherwise.
+
+---
+
+### **Problem 20: Generate Fibonacci Sequence Up to N**
+Write a function called `fibonacci_sequence` that takes an integer `n` and returns a vector containing the Fibonacci sequence up to `n`.
+
+---
+
+### ** Solutions **
+
 ---
 
 ## **Problem 1: Even or Odd**
