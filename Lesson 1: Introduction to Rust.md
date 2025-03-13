@@ -127,9 +127,21 @@ Rust is a compiled language, meaning your code is translated into machine code b
 
 ---
 
-## **6. Practice Exercise**
-1. Modify the "Hello, World!" program to print your name instead of "World".
-2. Use Cargo to create a new project called `greeting` and write a program that prints a personalized greeting.
+# **6. Practice Exercise**
+
+1. **Modify the "Hello, World!" program to print your name instead of "World".**
+
+2. **Use Cargo to create a new project called `greeting` and write a program that prints a personalized greeting.**
+
+3. **Understand Compiled vs. Interpreted Languages: Write a short explanation of the differences between compiled and interpreted languages using Rust and Python as examples.**
+
+4. **Explore Cargo Commands: Experiment with `cargo build`, `cargo run`, `cargo check`, and `cargo clean`, and write down what each one does.**
+
+5. **Create a New Project: Use Cargo to create a new project called `calculator` and write a program that adds two numbers and prints the result.**
+
+6. **Experiment with `println!`: Print different types of data (integers, floats, strings, booleans) using the `println!` macro.**
+
+7. **Write a Program to Calculate the Area of a Rectangle: Define variables for length and width, calculate the area, and print the result.**
 
 ---
 
